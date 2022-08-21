@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity">
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:accessibilityPaneTitle="title"
+        android:iconifiedByDefault="true"
+        android:queryHint="Enter thr name">
+
+        <requestFocus />
+    </SearchView>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/et_search"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:hint="Enter the name to search..."-->
+    <!--        />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/iv_search"-->
+    <!--        android:src="@drawable/search_icon"-->
+    <!--        android:layout_width="35dp"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignEnd="@id/et_search"-->
+    <!--        android:layout_marginRight="15dp"-->
+    <!--        android:layout_marginEnd="5dp"/>-->
+
+    <Button
+        android:id="@+id/btn_clear_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search"
+        android:backgroundTint="#F8DEE7"
+        android:text="CLEAR ALL"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_clear_all"
+        android:layout_margin="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="54dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/floating_action_button" />
+
+</RelativeLayout>

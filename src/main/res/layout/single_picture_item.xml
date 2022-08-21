@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#FDFBFB"
+        app:cardElevation="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/sample_pic" />
+
+            <TextView
+                android:id="@+id/tv_pic_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_pic"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="sample_pic_title" />
+
+            <TextView
+                android:id="@+id/tv_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/time_quest"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tv_time"
+                app:layout_constraintStart_toEndOf="@id/iv_pic"
+                app:layout_constraintTop_toBottomOf="@id/tv_pic_name" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/time"
+                android:textColor="@color/purple_700"
+                android:textSize="10sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_time_label"
+                app:layout_constraintStart_toEndOf="@id/tv_time_label"
+                app:layout_constraintTop_toBottomOf="@id/tv_pic_name"
+                tools:text="sample time" />
+
+            <TextView
+                android:id="@+id/tv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="2dp"
+                android:text="&#8942;"
+                android:textAppearance="?android:textAppearanceLarge"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>
